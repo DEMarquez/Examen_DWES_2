@@ -1,0 +1,22 @@
+<!DOCTIPE html>
+<html>
+  <head>
+    <link href="{{asset('/css/styleGfct.css')}}" rel="stylesheet">
+  </head>
+  <body class="cuerpo">
+    <h1>GESTOR FCT SECCION CONFIGURACION</h1>
+    <table id="configuracion">
+      <tr>
+        <th>#</th>
+        <th>Parametro</th>
+        <th>Configuracion</th>
+      </tr>
+    {% for item in configuracion %}
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.param }}</td>
+        <td>{{ item.configuracion }}</td>
+      <tr>
+    {% endfor %}
+    </table>
+  </body>
