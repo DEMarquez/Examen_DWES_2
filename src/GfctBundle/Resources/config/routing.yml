@@ -6,8 +6,8 @@ nuevo_usuario:
     path:     /register
     defaults: { _controller: GfctBundle:User:register }
 
-user_codificator:
-    path:     /user
+usuarios_logado:
+    path:     /usuarios
     defaults: { _controller: GfctBundle:User:usuarios }
 
 login:
@@ -20,7 +20,7 @@ all_empresa:
 
 all_configuracion:
     path:     /conf/all
-    defaults: { _controller: GfctBundle:Configuracion:all }    
+    defaults: { _controller: GfctBundle:Configuracion:all }
 
 all_alumno:
     path:     /alumno/all

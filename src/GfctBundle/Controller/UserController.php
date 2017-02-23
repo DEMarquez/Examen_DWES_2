@@ -17,21 +17,6 @@ class UserController extends Controller
 
   public function usuariosAction()
   {
-    // whatever *your* User object is
-    $user = new User();
-    $plainPassword = '1234';
-    $encoder = $this->container->get('security.password_encoder');
-    $encoded = $encoder->encodePassword($user, $plainPassword);
-
-    $user->setPassword($encoded);
-    $user->setUserName("dani");
-    $user->setEmail("asd@asd.asd");
-    $roles = ["ROLE_USUARIO"];
-    $user->setRoles($roles);
-
-    $em = $this->getDoctrine()->getManager();
-    $em->persist($user);
-    $em->flush();
     return $this->render('GfctBundle:Default:usuarios.html.twig');
   }
 
@@ -66,7 +51,7 @@ class UserController extends Controller
    }
 
 
-    public function loginAction(Request $request)
+  public function loginAction(Request $request)
     {
       $authenticationUtils = $this->get('security.authentication_utils');
 
